@@ -24,13 +24,37 @@ namespace group_1_project
             Password = password;
             this.course = course;
         }
+
+        private string GeneratePassword()
+        {
+            string last4 = StudentNumber.Substring(StudentNumber.Length - 4);
+            return Name + last4;
+        }
+
+        // Validate password
+        public bool ValidatePassword(string inputPassword)
+        {
+            string correctPassword = GeneratePassword();
+
+            if (inputPassword == correctPassword)
+            {
+                Console.WriteLine("Acess granted!");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("access denied! Your password is incorrect");
+                return false;
+            }
+        }
+
         // Method to display student information
         public void DisplayInfo()
         {
             Console.WriteLine($"Name: {Name}, Age: {Age}, Student Number: {StudentNumber}");
         }
-
-        //Method for student to enter password
+        
+        //Method for student to enter password//
         public bool EnterPassword(string inputPassword, string correctPassword)
         {
             return inputPassword == correctPassword;
