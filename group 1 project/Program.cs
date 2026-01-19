@@ -36,6 +36,15 @@ namespace group_1_project
             Console.WriteLine( "Please enter your password again to validate:");
             string inputPassword = Convert.ToString(Console.ReadLine());
 
+            // loop until correct password is entered
+            while (!student.ValidatePassword(inputPassword))
+            {
+                Console.WriteLine("Incorrect password. Please try again:");
+                inputPassword = Convert.ToString(Console.ReadLine());
+
+            }
+
+            // Correct password entered
 
 
 
