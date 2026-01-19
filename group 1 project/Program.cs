@@ -41,9 +41,10 @@ namespace group_1_project
             {
                 Console.WriteLine("Incorrect password. Please try again:");
                 inputPassword = Convert.ToString(Console.ReadLine());
+
             }
 
-
+            // Correct password entered
 
 
 
