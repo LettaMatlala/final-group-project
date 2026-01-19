@@ -18,6 +18,14 @@ namespace group_1_project
             Console.WriteLine("Enter your Age");
             int age = Convert.ToInt32(Console.ReadLine());
 
+            //email
+            Console.WriteLine("Enter your Email");
+            string email = Convert.ToString(Console.ReadLine());
+
+            //university
+            Console.WriteLine("Enter your University");
+            string university = Convert.ToString(Console.ReadLine());
+
             // USER STUDENT NUMBER
             Console.WriteLine("Enter your Student Number");
             int studentnumber = Convert.ToInt32(Console.ReadLine());
@@ -26,12 +34,10 @@ namespace group_1_project
             Console.WriteLine("Enter your Password");
             string password = Convert.ToString(Console.ReadLine());
 
-            // USER COURSE
-            Console.WriteLine("Enter your Course");
-            string course = Convert.ToString(Console.ReadLine());
+
 
             // Create Student Object
-            Student student = new Student(name, age, studentnumber.ToString(), password, course);
+            Student student = new Student(name, age, studentnumber.ToString(), password, email);
             student.DisplayInfo();
             Console.WriteLine( "Please enter your password again to validate:");
             string inputPassword = Convert.ToString(Console.ReadLine());
@@ -44,7 +50,7 @@ namespace group_1_project
 
             }
 
-            // Correct password entered
+           
 
 
 
