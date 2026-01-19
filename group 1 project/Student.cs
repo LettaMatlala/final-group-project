@@ -18,12 +18,38 @@ namespace group_1_project
         // Constructor
         public Student(string name, int age, string studentnumber, string password, string course)
         {
-            Name = name;
+            Name = name; 
             Age = age;
             StudentNumber = studentnumber;
             Password = password;
             this.course = course;
         }
+
+        // Generate correct password.
+        private string GeneratePassword()
+        {
+            string last4 = StudentNumber.Substring(StudentNumber.Length - 4);
+            return Name + last4;
+        }
+
+        // Validate password
+        public bool ValidatePassword(string inputPassword)
+        {
+            string correctPassword = GeneratePassword();
+
+            if (inputPassword == correctPassword)
+            {
+                Console.WriteLine("Access granted");
+
+                return true;
+            }
+            else
+            {
+                Console.WriteLine(" Access denied: Incorrect password");
+                return false;
+            }
+        }
+
         // Method to display student information
         public void DisplayInfo()
         {
