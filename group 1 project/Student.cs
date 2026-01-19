@@ -13,16 +13,16 @@ namespace group_1_project
         public int Age { get; set; }
         public string StudentNumber { get; set; }
         public string Password { get; set; }
-        public string course { get; set; }
+        public string Email { get; set; }
 
         // Constructor
-        public Student(string name, int age, string studentnumber, string password, string course)
+        public Student(string name, int age, string studentnumber, string password, string email)
         {
             Name = name;
             Age = age;
             StudentNumber = studentnumber;
             Password = password;
-            this.course = course;
+            this.Email = email;
 
         }
 
@@ -52,7 +52,7 @@ namespace group_1_project
         // Method to display student information
         public void DisplayInfo()
         {
-            Console.WriteLine($"Name: {Name}, Age: {Age}, Student Number: {StudentNumber}");
+            Console.WriteLine($"Name: {Name}, Age: {Age}, Student Number: {StudentNumber}, email{Email}");
         }
         
         //Method for student to enter password//
