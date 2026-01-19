@@ -23,6 +23,7 @@ namespace group_1_project
             StudentNumber = studentnumber;
             Password = password;
             this.course = course;
+
         }
         // Method to display student information
         public void DisplayInfo()
