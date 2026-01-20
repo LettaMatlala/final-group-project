@@ -74,20 +74,7 @@ namespace group_1_project
 
             }
 
-          /*  // METHOD TO DISPLAY INFO
-            student.DisplayInfo();
-            
-            //VALIDATE PASSWORD
-            Console.WriteLine( "Please enter your password again to validate:");
-            string inputPassword = Convert.ToString(Console.ReadLine());
-
-            // LOOP UNTIL CORRECT PASSWORD IS ENTERED
-            while (!student.ValidatePassword(inputPassword))
-            {
-                Console.WriteLine("Incorrect password. Please try again:");
-                inputPassword = Convert.ToString(Console.ReadLine());
-
-            }*/
+          
 
 
 
