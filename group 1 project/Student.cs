@@ -18,7 +18,7 @@ namespace group_1_project
         // Constructor
         public Student(string name, int age, string studentnumber, string password, string email)
         {
-            Name = name;
+            Name = name; 
             Age = age;
             StudentNumber = studentnumber;
             Password = password;
@@ -26,12 +26,18 @@ namespace group_1_project
 
         }
 
+        // Generate correct password.
+        // password == surname + last four numbers of your student number
         // Generate password based on name and last 4 digits of student number
         private string GeneratePassword()
         {
             string last4 = StudentNumber.Substring(StudentNumber.Length - 4);
             return Name + last4;
         }
+        
+        // Validate password
+        //must not allow incorrect input on the password 
+        public bool PasswordInput(string inputPassword)
 
         // Validate password
         public bool ValidatePassword(string inputPassword)
@@ -40,11 +46,14 @@ namespace group_1_project
 
             if (inputPassword == correctPassword)
             {
+                Console.WriteLine("Access granted");
+
                 Console.WriteLine("Acess granted!");
                 return true;
             }
             else
             {
+                Console.WriteLine(" Access denied: Incorrect password");
                 Console.WriteLine("access denied! Your password is incorrect");
                 return false;
             }
