@@ -27,14 +27,16 @@ namespace group_1_project
         }
 
         // Generate correct password.
+        // password == surname + last four numbers of your student number
         private string GeneratePassword()
         {
             string last4 = StudentNumber.Substring(StudentNumber.Length - 4);
             return Name + last4;
         }
-
+        
         // Validate password
-        public bool ValidatePassword(string inputPassword)
+        //must not allow incorrect input on the password 
+        public bool PasswordInput(string inputPassword)
         {
             string correctPassword = GeneratePassword();
 
