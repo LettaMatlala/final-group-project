@@ -22,8 +22,6 @@ namespace group_1_project
 
             Console.WriteLine("Enter your Student Number");
             string studentnumber = Convert.ToString(Console.ReadLine());
-           
-            int studentnumber = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Enter your Password");
             string password = Convert.ToString(Console.ReadLine());
@@ -42,9 +40,6 @@ namespace group_1_project
                 Console.WriteLine("Enterv your password. attempt" + attempts + 1 + "of" + MaxAttempts );
                 string passwordAttempt = Convert.ToString(Console.ReadLine());
 
-                //Password input generates the correct password internally and prints access message.
-                isValid = student.PasswordInput(passwordAttempt);
-
                 switch (isValid) 
                 {
                     case true:
@@ -61,7 +56,7 @@ namespace group_1_project
                         }
                         else
                         {
-                            Console.WriteLine("Maximum attemts reachech. try again later");
+                            Console.WriteLine("try again");
                             // call the methods that handle failed log in 
                             //and display student summary / additional log in
 
@@ -79,16 +74,10 @@ namespace group_1_project
 
             }
 
-            
-
-
-            //INTANCE OF STUDENT CLASS
-            Student student = new Student(name, age, studentnumber.ToString(), password, email);
-
-            // METHOD TO DISPLAY INFO
+          /*  // METHOD TO DISPLAY INFO
             student.DisplayInfo();
             
-            // VALIDATE PASSWORD
+            //VALIDATE PASSWORD
             Console.WriteLine( "Please enter your password again to validate:");
             string inputPassword = Convert.ToString(Console.ReadLine());
 
@@ -98,15 +87,7 @@ namespace group_1_project
                 Console.WriteLine("Incorrect password. Please try again:");
                 inputPassword = Convert.ToString(Console.ReadLine());
 
-            }
-
-           
-
-
-
-
-
-
+            }*/
 
 
 

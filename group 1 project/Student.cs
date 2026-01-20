@@ -34,10 +34,7 @@ namespace group_1_project
             string last4 = StudentNumber.Substring(StudentNumber.Length - 4);
             return Name + last4;
         }
-        
-        // Validate password
-        //must not allow incorrect input on the password 
-        public bool PasswordInput(string inputPassword)
+
 
         // Validate password
         public bool ValidatePassword(string inputPassword)
