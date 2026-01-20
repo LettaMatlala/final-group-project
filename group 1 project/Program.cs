@@ -10,39 +10,34 @@ namespace group_1_project
     {
         static void Main(string[] args)
         {
-            // USER NAME
+            // ASK USER FOR INPUT
             Console.WriteLine("Enter your Name");
             string name = Convert.ToString(Console.ReadLine());
 
-            // USER AGE
             Console.WriteLine("Enter your Age");
             int age = Convert.ToInt32(Console.ReadLine());
 
-            //email
             Console.WriteLine("Enter your Email");
             string email = Convert.ToString(Console.ReadLine());
 
-            //university
-            Console.WriteLine("Enter your University");
-            string university = Convert.ToString(Console.ReadLine());
-
-            // USER STUDENT NUMBER
             Console.WriteLine("Enter your Student Number");
             int studentnumber = Convert.ToInt32(Console.ReadLine());
 
-            // USER PASSWORD
             Console.WriteLine("Enter your Password");
             string password = Convert.ToString(Console.ReadLine());
 
 
-
-            // Create Student Object
+            //INTANCE OF STUDENT CLASS
             Student student = new Student(name, age, studentnumber.ToString(), password, email);
+
+            // METHOD TO DISPLAY INFO
             student.DisplayInfo();
+            
+            // VALIDATE PASSWORD
             Console.WriteLine( "Please enter your password again to validate:");
             string inputPassword = Convert.ToString(Console.ReadLine());
 
-            // loop until correct password is entered
+            // LOOP UNTIL CORRECT PASSWORD IS ENTERED
             while (!student.ValidatePassword(inputPassword))
             {
                 Console.WriteLine("Incorrect password. Please try again:");
