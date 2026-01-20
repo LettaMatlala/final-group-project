@@ -17,8 +17,62 @@ namespace group_1_project
             int age = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter your Student Number");
             string studentnumber = Convert.ToString(Console.ReadLine());
+           
             Console.WriteLine("Enter your Password");
             string password = Convert.ToString(Console.ReadLine());
+
+            // create a student instance 
+            //call the student class so you can work with the methods
+            Student student = new Student(name, age, studentnumber, password, string.Empty);
+
+            const int MaxAttempts = 3;
+            int attempts = 0;
+            bool isValid = false;
+
+            //create a while  looop that allows multiple attempts 
+            while (attempts < MaxAttempts && !isValid) 
+            {
+                Console.WriteLine("Enterv your password. attempt" + attempts + 1 + "of" + MaxAttempts );
+                string passwordAttempt = Convert.ToString(Console.ReadLine());
+
+                //Password input generates the correct password internally and prints access message.
+                isValid = student.PasswordInput(passwordAttempt);
+
+                switch (isValid) 
+                {
+                    case true:
+                        Console.WriteLine("Welcome!");
+                        student.DisplayInfo();
+                        break;
+
+                        case false: 
+                        
+                        attempts++;
+                        if (attempts == MaxAttempts)
+                        {
+                            Console.WriteLine("You have entered an icorrect possword! please try again");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Maximum attemts reachech. try again later");
+                            // call the methods that handle failed log in 
+                            //and display student summary / additional log in
+
+                            student.DisplayInfo();
+
+                        }
+                        break;
+                }
+                
+               
+
+                
+
+
+
+            }
+
+            
 
 
 
