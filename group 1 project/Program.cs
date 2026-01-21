@@ -11,19 +11,19 @@ namespace group_1_project
         static void Main(string[] args)
         {
             // ASK USER FOR INPUT
-            Console.WriteLine("Enter your Name");
+            Console.WriteLine("Please enter your Name");
             string name = Convert.ToString(Console.ReadLine());
 
-            Console.WriteLine("Enter your Age");
+            Console.WriteLine("Please enter your Age");
             int age = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("Enter your Email");
+            Console.WriteLine("Please enter your Email");
             string email = Convert.ToString(Console.ReadLine());
 
-            Console.WriteLine("Enter your Student Number");
+            Console.WriteLine("Pease enter your Student Number");
             string studentnumber = Convert.ToString(Console.ReadLine());
 
-            Console.WriteLine("Enter your Password");
+            Console.WriteLine("Please enter your Password");
             string password = Convert.ToString(Console.ReadLine());
 
             // create a student instance 
@@ -37,7 +37,7 @@ namespace group_1_project
             //create a while  looop that allows multiple attempts 
             while (attempts < MaxAttempts && !isValid) 
             {
-                Console.WriteLine("Enterv your password. attempt" + attempts + 1 + "of" + MaxAttempts );
+                Console.WriteLine("Enter your password." + attempts + 1 + "of" + MaxAttempts );
                 string passwordAttempt = Convert.ToString(Console.ReadLine());
 
                 switch (isValid) 
