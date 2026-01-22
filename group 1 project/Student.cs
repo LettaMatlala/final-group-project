@@ -11,7 +11,8 @@ namespace group_1_project
         // Properties of the Student class
         public string Name { get; set; }
         public int Age { get; set; }
-        public string StudentNumber { get; set; }
+       public string StudentNumber { get; set; } 
+
         public string Password { get; set; }
         public string Email { get; set; }
 
